@@ -1,0 +1,133 @@
+/* colours based on theme */
+.card {
+  --text-color: black;
+  --muted-color: darkgrey;
+  --background-color: white;
+  --accent-color: #fdd734;
+  --chip-background: lightgrey;
+  --hr-color: lightgrey;
+}
+
+.card.night_mode {
+  --text-color: white;
+  --muted-color: darkgrey;
+  --background-color: black;
+  --accent-color: #fdd734;
+  --chip-background: hsl(0, 0%, 20%);
+  --hr-color: hsl(0, 0%, 20%);
+}
+
+body {
+  font-family: "UD Digi Kyokasho NP-R", sans-serif;
+  font-size: 12pt;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+/* card front */
+h1 {
+  font-size: 3.5em;
+  line-height: 1em;
+  font-weight: normal;
+  text-align: center;
+}
+
+@font-face {
+  font-family: kanjistrokeorder;
+  src: url("_kanjistrokeorder.ttf");
+}
+
+#h1-font:checked ~ label > h1 {
+  /* change font of word when clicked */
+  font-family: kanjistrokeorder;
+}
+
+hr {  /* change appearance of hr to one line */
+  height: 1px;
+  border: none;
+  background-color: var(--hr-color);
+  margin: 0;
+}
+
+/* main info styles*/
+.bigger {  /* display word reading slightly larger */
+  font-size: 1.4em;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table tr {
+  border-bottom: 1px solid var(--hr-color);
+}
+
+table th,
+table td {
+  padding: 10px 0;
+}
+
+table th {
+  padding-right: 10px;
+  width: 0.1%;
+}
+
+table th p {
+  font-weight: normal;
+  padding: 0.25rem 0;
+  background-color: var(--chip-background);
+  border-radius: 0.25rem;
+  width: 3.5em;
+  user-select: none;
+}
+
+table tr p {
+  margin: 0;
+}
+
+table ul {
+  margin: 0;
+}
+
+/* pitch accent styling */
+svg.pitch > text {
+  fill: var(--text-color) !important;
+  font-family: jap;
+}
+
+svg.pitch > path {
+  stroke: var(--text-color) !important;
+}
+
+svg.pitch > circle[r="5"] {
+  fill: var(--text-color) !important;
+}
+
+svg.pitch > circle[r="3.25"] {
+  fill: var(--background-color) !important;
+}
+
+/* translation styling + show/hide functionality */
+table #translation {
+  color: var(--muted-color);
+  display: none;
+}
+
+table #translation p {
+  border-left: 2px solid var(--muted-color);
+  padding-left: 0.5em;
+}
+
+#show-translation:checked ~ table #translation {
+  display: table-row;
+}
+
+#show-translation:checked ~ table #translation > td,
+#show-translation:checked tr {
+  padding-top: 0;
+}
+
+#show-translation:checked ~ table #sentence {
+  border-bottom: none;
+}

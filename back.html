@@ -1,0 +1,50 @@
+{{FrontSide}}
+<hr id="answer" />
+<input type="checkbox" id="show-translation" style="display: none" />
+
+<table>
+  <tr>
+    <th>
+      <p>読方</p>
+    </th>
+    <td class="bigger">
+      {{Pitch Accent}} {{^Pitch Accent}} {{Reading}} {{/Pitch Accent}}
+    </td>
+    <td>{{Audio}}</td>
+  </tr>
+  <tr>
+    <th>
+      <p>意味</p>
+    </th>
+    <td colspan="2">{{Meaning}}</td>
+  </tr>
+  <tr>
+    <th>
+      <p>POS</p>
+    </th>
+    <td>{{Note}}</td>
+  </tr>
+  <tr id="sentence">
+    <th>
+      <label for="show-translation">
+        <p>例文</p>
+      </label>
+    </th>
+    <td class="bigger">{{furigana:Sentence}}</td>
+    <td>{{Sentence-Audio}}</td>
+  </tr>
+  <tr id="translation">
+    <th></th>
+    <td colspan="2">
+      <p>{{SentenceMeaning}}</p>
+    </td>
+  </tr>
+  {{#User Notes}}
+  <tr>
+    <th>
+      <p>Note</p>
+    </th>
+    <td colspan="2">{{furigana:User Notes}}</td>
+  </tr>
+  {{/User Notes}}
+</table>
