@@ -18,7 +18,8 @@ A simple Anki card template for Core 2k/6k Japanese vocabulary decks
 
 1. On your Anki client of choice, find "Manage Note Types" and edit the card for your Core 2k/6k note type
 2. Paste the contents of [front.html](front.html), [back.html](back.html), and [style.css](style.css) into the respective fields
-3. If necessary, update the [field replacements](https://docs.ankiweb.net/templates/fields.html) with those used by your deck
+3. Paste [_kanjistrokeorder.ttf](_kanjistrokeorder.ttf) into your collection.media folder ([where?](https://docs.ankiweb.net/files.html#file-locations))
+4. If necessary, update the [field replacements](https://docs.ankiweb.net/templates/fields.html) with those used by your deck
 
 ## Credits
 
